@@ -4,7 +4,8 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "Review"
+    "displayName": "Review",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,7 +14,7 @@
   "attributes": {
     "content": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "rating": {
       "type": "integer",
@@ -26,6 +27,9 @@
       "relation": "manyToOne",
       "target": "api::article.article",
       "inversedBy": "reviews"
+    },
+    "author": {
+      "type": "string"
     }
   }
 }
